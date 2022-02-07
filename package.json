@@ -1,12 +1,31 @@
 {
   "name": "migrante-design-vue",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Migrante design Vue",
+  "version": "0.1.2",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "node build/build.js",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "contributors": [
+    {
+      "name": "Javier Gomez",
+      "email": "javier.gomez.contact@gmail.com"
+    }
+  ],
+  "license": "UNLICENSED",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
@@ -18,7 +37,11 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "node-sass": "^7.0.1",
+    "vue-template-compiler": "^2.6.11",
+    "sass-loader": "^10",
+    "sass": "1.49.7",
+    "shelljs": "^0.8.5"
   },
   "eslintConfig": {
     "root": true,

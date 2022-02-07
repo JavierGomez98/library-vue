@@ -1,0 +1,72 @@
+.form-select {
+    position: relative;
+    width: max-content;
+    font-size: 14px;
+    border-radius: 10px;
+  
+    & select, .select {
+      position: relative;
+      width: 100%;
+      background: transparent;
+      padding: 11px 35px 11px 12px;
+      background-image: none;
+      outline: none;
+      border: none;
+      z-index: 2;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  
+      &:disabled {
+        cursor: default;
+        & + .focus {
+          cursor: default;
+          opacity: 40%;
+        }
+      }
+  
+      &:focus + .select-focus {
+        border-color: var(--primary-color);
+  
+        &::after { border-color: var(--primary-color); }
+      }
+  
+      &:active,
+      &:hover + .select-focus {
+        border-color: var(--primary-dark-color) !important;
+  
+        &::after {
+          border-color: var(--primary-dark-color) !important;
+        }
+      }
+    }
+  
+    & .select-focus {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 2px solid var(--primary-dark-color-15);
+      border-radius: inherit;
+      cursor: pointer;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        right: 18px;
+        top: calc(50% - 7px);
+        width: 9px;
+        height: 9px;
+        display: block;
+        border-left: 2px solid #484848;
+        border-bottom: 2px solid #484848;
+        transform: rotate(-45deg);
+        transition: all 0.25s ease;
+      }
+    }
+  }
+  

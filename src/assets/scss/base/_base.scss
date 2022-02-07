@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input:focus {
+  outline: none !important;
+}
+
+/**
+  Flex
+**/
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+  Elevations and Shadows
+**/
+.shadow-light {
+  &-100 { box-shadow: var(--shadow-light-100); }
+  &-80 { box-shadow: var(--shadow-light-80); }
+  &-60 { box-shadow: var(--shadow-light-60); }
+  &-40 { box-shadow: var(--shadow-light-40); }
+  &-20 { box-shadow: var(--shadow-light-20); }
+}
+
+/**
+  ScrollBar
+**/
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f16b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
