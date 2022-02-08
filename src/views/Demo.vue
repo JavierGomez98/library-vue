@@ -279,9 +279,7 @@
   </div>
 </template>
 <script>
-import SelectForm from "../components/SelectForm/SelectForm.vue";
 export default {
-  components: { SelectForm },
   name: "Demo",
   data() {
     return {
@@ -293,7 +291,7 @@ export default {
         { name: "Albania", code: "AL" },
         { name: "Algeria", code: "DZ" },
         { name: "American Samoa", code: "AS" },
-        { name: "AndorrA", code: "AD" },
+        { name: "Andorra", code: "AD" },
         { name: "Angola", code: "AO" },
         { name: "Anguilla", code: "AI" },
         { name: "Antarctica", code: "AQ" },

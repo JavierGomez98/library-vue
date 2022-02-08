@@ -1,32 +1,4 @@
-<template>
-  <div class="v-form-select">
-    <input
-      class="v-form-select__input"
-      :type="typeText ? 'text' : 'button'"
-      :value="setValue"
-      :placeholder="placeholder"
-      spellcheck="false"
-      @click="dropList()"
-      @input="changeText($event.target.value)"
-    />
-    <span class="select-focus"></span>
-    <ul ref="list" x-placement="bottom-start" v-click-outside="outList">
-      <li
-        v-for="option in selectOptions"
-        :key="option.id"
-        :value="option.id"
-        @click="selectOption($event)"
-      >
-        {{ option.data }}
-      </li>
-    </ul>
-  </div>
-</template>
-<script>
-import Vue from 'vue';
-import './SelectForm.scss'
-
-export default Vue.extend({
+export default {
   name: "select-form",
   props: {
     value: null,
@@ -103,5 +75,4 @@ export default Vue.extend({
       if (!this.typeText) this.setSelected(this.value);
     },
   },
-});
-</script>
+};

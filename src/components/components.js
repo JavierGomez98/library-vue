@@ -1,4 +1,4 @@
-import SelectForm from "./SelectForm";
+import SelectForm from "./SelectForm/index";
 
 export {
     SelectForm,
