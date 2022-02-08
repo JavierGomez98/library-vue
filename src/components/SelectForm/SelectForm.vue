@@ -1,3 +1,21 @@
+<template>
+    <div class="v-form-select">
+        <input class="v-form-select__input"
+          :type="typeText ? 'text' : 'button'"
+          :value="setValue"
+          :placeholder="placeholder"
+          spellcheck="false"
+          @click="dropList()"
+          @input="changeText($event.target.value)" />
+        <span class="select-focus"></span>
+        <ul ref="list" x-placement="bottom-start" v-click-outside="outList">
+            <li v-for="option in selectOptions" :key="option.id" :value="option.id" @click="selectOption($event)">
+                {{ option.data }}
+            </li>
+        </ul>
+    </div>
+</template>
+<script>
 export default {
   name: "select-form",
   props: {
@@ -76,3 +94,5 @@ export default {
     },
   },
 };
+</script>
+<style lang="scss" scoped src="./SelectForm.scss"></style>

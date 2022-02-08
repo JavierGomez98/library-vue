@@ -2,9 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import './assets/scss/main.scss'
 import MigranteVue from './components'
+import { BootstrapVue } from './components'
 
 Vue.config.productionTip = false
+
 Vue.use(MigranteVue);
+Vue.use(BootstrapVue);
 
 Vue.directive('click-outside', {
   bind: function (el, binding, vnode) {

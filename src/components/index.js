@@ -33,4 +33,6 @@ const MigranteVue = {
 
 export * from './components'
 
+export { BootstrapVue } from 'bootstrap-vue'
+
 export default MigranteVue
